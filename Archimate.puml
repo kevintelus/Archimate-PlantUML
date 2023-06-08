@@ -89,6 +89,40 @@ skinparam usecase {
   BorderColor #000000
 }
 
+' Custom ArchiMate Extensions
+' ##################################
+skinparam rectangle<<application-system>> {
+    'FontSize 20
+    'FontName FONTSERIF
+    'FontStyle plain
+    'FontColor red
+    'BorderColor red
+  }
+
+skinparam rectangle<<application-module>> {
+    'FontSize 20
+    'FontName FONTSERIF
+    'FontStyle plain
+    'FontColor red
+    'BorderColor red
+  }
+
+skinparam rectangle<<technology-artifact-module>> {
+    'FontSize 20
+    'FontName FONTSERIF
+    'FontStyle plain
+    'FontColor red
+    'BorderColor red
+  }
+
+skinparam rectangle<<technology-node-weblogic>> {
+    'FontSize 20
+    'FontName FONTSERIF
+    'FontStyle plain
+    'FontColor red
+    'BorderColor red
+  }
+
 ' Layout
 ' ##################################
 !definelong LAYOUT_AS_SKETCH
