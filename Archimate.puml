@@ -6,6 +6,8 @@
 !define ARCHIMATECUSTOMICONURL https://raw.githubusercontent.com/kevintelus/Archimate-PlantUML/master/icons/ArchiMate
 !includeurl ARCHIMATECUSTOMICONURL/application-module.puml
 !includeurl ARCHIMATECUSTOMICONURL/application-system.puml
+!includeurl ARCHIMATECUSTOMICONURL/technology-artifact-module.puml
+!includeurl ARCHIMATECUSTOMICONURL/technology-node-weblogic.puml
 
 ' Styling
 ' ##################################
