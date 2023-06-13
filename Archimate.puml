@@ -97,6 +97,7 @@ skinparam rectangle<<application-system>> {
     'FontStyle plain
     'FontColor red
     'BorderColor red
+    HyperlinkUnderline true
   }
 
 skinparam rectangle<<application-module>> {
