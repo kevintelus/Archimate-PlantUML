@@ -95,9 +95,9 @@ skinparam rectangle<<application-system>> {
     'FontSize 20
     'FontName FONTSERIF
     'FontStyle plain
-    'FontColor red
+    FontColor blue
     'BorderColor red
-    HyperlinkUnderline true
+    'HyperlinkUnderline true
   }
 
 skinparam rectangle<<application-module>> {
