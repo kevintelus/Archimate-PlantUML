@@ -172,9 +172,9 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define Business_Location(e_alias, e_label) archimate #BUSINESS "e_label" <<business-location>> as e_alias
 
 'Application Elements
-!define ApplicationComponent(e_alias, e_label, e_link) archimate #APPLICATION "e_label" <<application-component>> as e_alias
+!define ApplicationComponent(e_alias, e_label) archimate #APPLICATION "e_label" <<application-component>> as e_alias
 !define Application_Collaboration(e_alias, e_label) archimate #APPLICATION "e_label" <<application-collaboration>> as e_alias
-!define ApplicationInterface(e_alias, e_label, e_link) archimate #APPLICATION "e_label" <<application-interface>> as e_alias
+!define ApplicationInterface(e_alias, e_label) archimate #APPLICATION "e_label" <<application-interface>> as e_alias
 !define Application_Function(e_alias, e_label) archimate #APPLICATION "e_label" <<application-function>> as e_alias
 !define Application_Interaction(e_alias, e_label) archimate #APPLICATION "e_label" <<application-interaction>> as e_alias
 !define Application_Process(e_alias, e_label) archimate #APPLICATION "e_label" <<application-process>> as e_alias
