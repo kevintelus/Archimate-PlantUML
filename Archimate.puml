@@ -154,8 +154,6 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define ApplicationInterface(e_alias, e_label, e_link) rectangle "e_label" <<$aInterface>><<application-interface>> as e_alias [[e_link]] #Application
 !define ApplicationSystem(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-system>> as e_alias [[e_link]] #Application
 !define ApplicationModule(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-module>> as e_alias [[e_link]] #Application
-!define Application_Component(e_alias, e_label, e_link) rectangle "e_label" <<$aComponent>><<application-component>> as e_alias [[e_link]] #Application
-!define Application_Interface(e_alias, e_label, e_link) rectangle "e_label" <<$aInterface>><<application-interface>> as e_alias [[e_link]] #Application
 !define Application_System(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-system>> as e_alias [[e_link]] #Application
 !define Application_Module(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-module>> as e_alias [[e_link]] #Application
 !define DataObject(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-data-object>> as e_alias [[e_link]] #Application
