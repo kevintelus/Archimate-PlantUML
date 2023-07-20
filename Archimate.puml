@@ -182,10 +182,10 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define Application_Service(e_alias, e_label) archimate #APPLICATION "e_label" <<application-service>> as e_alias
 !define DataObject(e_alias, e_label) archimate #APPLICATION "e_label" <<application-data-object>> as e_alias
 'Application Element extensions - 6/14/2023
-!define ApplicationComponent(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-component>> as e_alias [[e_link]] #Application
-!define ApplicationInterface(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-interface>> as e_alias [[e_link]] #Application
+!define ApplicationComponent(e_alias, e_label, e_link) rectangle "e_label" <<$aComponent>><<application-component>> as e_alias [[e_link]] #Application
+!define ApplicationInterface(e_alias, e_label, e_link) rectangle "e_label" <<$aInterface>><<application-interface>> as e_alias [[e_link]] #Application
 !define Application_System(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-system>> as e_alias [[e_link]] #Application
-!define Application_Module(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-module>> as e_alias [[e_link]] #Application
+!define Application_Module(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-module>> as e_alias [[e_link]] #Application
 '!define Application_Module(e_alias, e_label) archimate #APPLICATION "e_label" <<application-module>> as e_alias
 '!define Application_System(e_alias, e_label) archimate #APPLICATION "e_label" <<application-system>> as e_alias
 
