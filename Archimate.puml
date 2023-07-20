@@ -150,17 +150,17 @@ skinparam rectangle<<technology-node-weblogic>> {
 ' Elements
 ' ##################################
 ' TELUS element custom extensions - 7/20/2023
-!define ApplicationComponent(e_alias, e_label, e_link) rectangle "e_label" <<$aComponent>><<application-component>> as e_alias [[e_link]] #Application
-!define ApplicationInterface(e_alias, e_label, e_link) rectangle "e_label" <<$aInterface>><<application-interface>> as e_alias [[e_link]] #Application
+!define ApplicationComponent(e_alias, e_label) rectangle "e_label" <<$aComponent>><<application-component>> as e_alias #Application
+!define ApplicationInterface(e_alias, e_label) rectangle "e_label" <<$aInterface>><<application-interface>> as e_alias #Application
 !define ApplicationSystem(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-system>> as e_alias [[e_link]] #Application
 !define ApplicationModule(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-module>> as e_alias [[e_link]] #Application
 !define Application_System(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-system>> as e_alias [[e_link]] #Application
 !define Application_Module(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-module>> as e_alias [[e_link]] #Application
-!define DataObject(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-data-object>> as e_alias [[e_link]] #Application
-!define Artifact(e_alias, e_label, e_link)  rectangle "e_label" <<$tArtifact>><<technology-artifact>> as e_alias [[e_link]] #Technology
-!define Node(e_alias, e_label, e_link)  rectangle "e_label" <<$tNetwork>><<technology-node>> as e_alias [[e_link]] #Technology
+!define DataObject(e_alias, e_label) rectangle "e_label" <<$aModule>><<application-data-object>> as e_alias #Application
+!define Artifact(e_alias, e_label)  rectangle "e_label" <<$tArtifact>><<technology-artifact>> as e_alias #Technology
+!define Node(e_alias, e_label)  rectangle "e_label" <<$tNetwork>><<technology-node>> as e_alias #Technology
 !define Technology_Node_Weblogic(e_alias, e_label) node #TECHNOLOGY "e_label" <<$archimate/technology-node-weblogic>> as e_alias
-!define CommunicationNetwork(e_alias, e_label, e_link)  rectangle "e_label" <<$tNetwork>><<technology-network>> as e_alias [[e_link]] #Technology
+!define CommunicationNetwork(e_alias, e_label)  rectangle "e_label" <<$tNetwork>><<technology-network>> as e_alias #Technology
 
 'Strategy Elements
 !define Strategy_Resource(e_alias, e_label) archimate #STRATEGY "....\n e_label" <<strategy-resource>> as e_alias
