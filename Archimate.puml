@@ -156,7 +156,8 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define ApplicationModule(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-module>> as e_alias [[e_link]] #Application
 !define Application_System(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-system>> as e_alias [[e_link]] #Application
 !define Application_Module(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-module>> as e_alias [[e_link]] #Application
-!define DataObject(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-data-object>> as e_alias [[e_link]] #Application
+' No links to be generated for the following element types
+!define DataObject(e_alias, e_label) rectangle "e_label" <<$aModule>><<application-data-object>> as e_alias #Application
 !define Artifact(e_alias, e_label)  rectangle "e_label" <<$tArtifact>><<technology-artifact>> as e_alias #Technology
 !define Node(e_alias, e_label)  rectangle "e_label" <<$tNetwork>><<technology-node>> as e_alias #Technology
 !define Technology_Node_Weblogic(e_alias, e_label) node #TECHNOLOGY "e_label" <<$archimate/technology-node-weblogic>> as e_alias
