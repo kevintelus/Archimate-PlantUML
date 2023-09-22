@@ -161,7 +161,7 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define Node(e_alias, e_label, e_link)  rectangle "e_label" <<$tNetwork>><<technology-node>> as e_alias [[e_link]] #Technology
 !define Technology_Node_Weblogic(e_alias, e_label, e_link) node #TECHNOLOGY "e_label" <<$archimate/technology-node-weblogic>> as e_alias [[e_link]] 
 !define CommunicationNetwork(e_alias, e_label, e_link)  rectangle "e_label" <<$tNetwork>><<technology-network>> as e_alias [[e_link]] #Technology
-!define BusinessActor(e_alias, e_label, e_link) archimate #BUSINESS "e_label" <<business-actor>> as e_alias [[e_link]]
+!define BusinessActor(e_alias, e_label, e_link) rectangle #BUSINESS "e_label" <<business-actor>> as e_alias [[e_link]]
 
 
 'Strategy Elements
