@@ -9,6 +9,15 @@
 !includeurl ARCHIMATECUSTOMICONURL/technology-artifact-module.puml
 !includeurl ARCHIMATECUSTOMICONURL/technology-node-weblogic.puml
 
+sprite $aComponent jar:archimate/application-component
+sprite $aDataObject jar:archimate/application-data-object
+sprite $aInterface jar:archimate/application-interface
+sprite $tNetwork jar:archimate/technology-network
+sprite $tArtifact jar:archimate/technology-artifact
+sprite $tNode jar:archimate/technology-node
+sprite $tInfraInterface jar:archimate/technology-infra-interface
+sprite $bActor jar:archimate/business-actor
+
 ' Styling
 ' ##################################
 !define TECHN_FONT_SIZE 12
