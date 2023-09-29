@@ -256,17 +256,17 @@ skinparam rectangle<<technology-node-weblogic>> {
 
 ' Custom (Derived) Relationships
 ' Dervived Relationships will have a lighter line colour [#eee]
-!define Rel_Composition_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "*-[#eee]-")
-!define Rel_Aggregation_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "o-[#eee]-")
-!define Rel_Assignment_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "@-[#eee]->>")
-!define Rel_Specialization_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-[#eee]-|>")
-!define Rel_Serving_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-[#eee]->")
-!define Rel_Association_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "=[#eee]=")
-!define Rel_Flow_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "..>[#eee]>")
-!define Rel_Realization_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "~~|[#eee]>")
-!define Rel_Triggering_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-->[#eee]>")
-!define Rel_Access_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "~[#eee]~")
-!define Rel_Influence_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "..[#eee]>")
+!define Rel_Composition_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "*-[#bbb]-")
+!define Rel_Aggregation_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "o-[#bbb]-")
+!define Rel_Assignment_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "@-[#bbb]->>")
+!define Rel_Specialization_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-[#bbb]-|>")
+!define Rel_Serving_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-[#bbb]->")
+!define Rel_Association_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "=[#bbb]=")
+!define Rel_Flow_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "..>[#bbb]>")
+!define Rel_Realization_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "~~|[#bbb]>")
+!define Rel_Triggering_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-->[#bbb]>")
+!define Rel_Access_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "~[#bbb]~")
+!define Rel_Influence_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "..[#bbb]>")
 
 
 ' Relationships
