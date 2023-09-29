@@ -262,11 +262,11 @@ skinparam rectangle<<technology-node-weblogic>> {
 !define Rel_Specialization_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-[#bbb]-|>")
 !define Rel_Serving_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-[#bbb]->")
 !define Rel_Association_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "=[#bbb]=")
-!define Rel_Flow_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "..>[#bbb]>")
-!define Rel_Realization_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "~~|[#bbb]>")
-!define Rel_Triggering_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-->[#bbb]>")
+!define Rel_Flow_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, ".[#bbb].>>")
+!define Rel_Realization_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "~[#bbb]~|>")
+!define Rel_Triggering_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-[#bbb]->>")
 !define Rel_Access_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "~[#bbb]~")
-!define Rel_Influence_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "..[#bbb]>")
+!define Rel_Influence_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, ".[#bbb].>")
 
 
 ' Relationships
