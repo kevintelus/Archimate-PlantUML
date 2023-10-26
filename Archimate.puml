@@ -2,6 +2,22 @@
 ' Version 0.1
 ' Url will come here...
 
+' Sprites
+!define ARCHIMATECUSTOMICONURL https://raw.githubusercontent.com/kevintelus/Archimate-PlantUML/master/icons/ArchiMate
+!includeurl ARCHIMATECUSTOMICONURL/application-module.puml
+!includeurl ARCHIMATECUSTOMICONURL/application-system.puml
+!includeurl ARCHIMATECUSTOMICONURL/technology-artifact-module.puml
+!includeurl ARCHIMATECUSTOMICONURL/technology-node-weblogic.puml
+
+sprite $aComponent jar:archimate/application-component
+sprite $aDataObject jar:archimate/application-data-object
+sprite $aInterface jar:archimate/application-interface
+sprite $tNetwork jar:archimate/technology-network
+sprite $tArtifact jar:archimate/technology-artifact
+sprite $tNode jar:archimate/technology-node
+sprite $tInfraInterface jar:archimate/technology-infra-interface
+sprite $bActor jar:archimate/business-actor
+
 ' Styling
 ' ##################################
 !define TECHN_FONT_SIZE 12
@@ -82,6 +98,41 @@ skinparam usecase {
   BorderColor #000000
 }
 
+' Custom ArchiMate Extensions
+' ##################################
+skinparam rectangle<<application-system>> {
+    'FontSize 20
+    'FontName FONTSERIF
+    'FontStyle plain
+    FontColor blue
+    'BorderColor red
+    'HyperlinkUnderline true
+  }
+
+skinparam rectangle<<application-module>> {
+    'FontSize 20
+    'FontName FONTSERIF
+    'FontStyle plain
+    'FontColor red
+    'BorderColor red
+  }
+
+skinparam rectangle<<technology-artifact-module>> {
+    'FontSize 20
+    'FontName FONTSERIF
+    'FontStyle plain
+    'FontColor red
+    'BorderColor red
+  }
+
+skinparam rectangle<<technology-node-weblogic>> {
+    'FontSize 20
+    'FontName FONTSERIF
+    'FontStyle plain
+    'FontColor red
+    'BorderColor red
+  }
+
 ' Layout
 ' ##################################
 !definelong LAYOUT_AS_SKETCH
@@ -107,6 +158,21 @@ skinparam usecase {
 
 ' Elements
 ' ##################################
+' TELUS element custom extensions - 7/20/2023
+!define ApplicationComponent(e_alias, e_label, e_link) rectangle "e_label" <<$aComponent>><<application-component>> as e_alias [[e_link]] #Application
+!define ApplicationInterface(e_alias, e_label, e_link) rectangle "e_label" <<$aInterface>><<application-interface>> as e_alias [[e_link]] #Application
+!define ApplicationSystem(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-system>> as e_alias [[e_link]] #Application
+!define ApplicationModule(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-module>> as e_alias [[e_link]] #Application
+!define Application_System(e_alias, e_label, e_link) rectangle "e_label" <<$aSystem>><<application-system>> as e_alias [[e_link]] #Application
+!define Application_Module(e_alias, e_label, e_link) rectangle "e_label" <<$aModule>><<application-module>> as e_alias [[e_link]] #Application
+!define DataObject(e_alias, e_label, e_link) rectangle "e_label" <<$aDataObject>><<application-data-object>> as e_alias [[e_link]] #Application
+!define Artifact(e_alias, e_label, e_link)  rectangle "e_label" <<$tArtifact>><<technology-artifact>> as e_alias [[e_link]] #Technology
+!define Node(e_alias, e_label, e_link)  rectangle "e_label" <<$tNode>><<technology-node>> as e_alias [[e_link]] #Technology
+!define Technology_Node_Weblogic(e_alias, e_label, e_link) node #TECHNOLOGY "e_label" <<$archimate/technology-node-weblogic>> as e_alias [[e_link]] 
+!define CommunicationNetwork(e_alias, e_label, e_link)  rectangle "e_label" <<$tNetwork>><<technology-network>> as e_alias [[e_link]] #Technology
+!define BusinessActor(e_alias, e_label, e_link) rectangle #BUSINESS "e_label" <<$bActor>><<business-actor>> as e_alias [[e_link]]
+
+
 'Strategy Elements
 !define Strategy_Resource(e_alias, e_label) archimate #STRATEGY "....\n e_label" <<strategy-resource>> as e_alias
 !define Strategy_Capability(e_alias, e_label) archimate #STRATEGY "e_label" <<strategy-capability>> as e_alias
@@ -138,7 +204,7 @@ skinparam usecase {
 !define Application_Process(e_alias, e_label) archimate #APPLICATION "e_label" <<application-process>> as e_alias
 !define Application_Event(e_alias, e_label) archimate #APPLICATION "e_label" <<application-event>> as e_alias
 !define Application_Service(e_alias, e_label) archimate #APPLICATION "e_label" <<application-service>> as e_alias
-!define Application_DataObject(e_alias, e_label) archimate #APPLICATION "----\n e_label" <<application-data-object>> as e_alias
+!define Application_DataObject(e_alias, e_label) archimate #APPLICATION "e_label" <<application-data-object>> as e_alias
 
 'Technology Elements
 !define Technology_Node(e_alias, e_label) node #TECHNOLOGY "e_label" <<$archimate/technology-node>> as e_alias
@@ -153,7 +219,8 @@ skinparam usecase {
 !define Technology_Interaction(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-interaction>> as e_alias
 !define Technology_Event(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-event>> as e_alias
 !define Technology_Service(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-infra-service>> as e_alias
-!define Technology_Artifact(e_alias, e_label) archimate #TECHNOLOGY "----\n e_label" <<technology-artifact>> as e_alias
+!define Technology_Artifact(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-artifact>> as e_alias
+!define Technology_Artifact_Module(e_alias, e_label) archimate #TECHNOLOGY "e_label" <<technology-artifact-module>> as e_alias
 
 'Physical Elements
 !define Physical_Equipment(e_alias, e_label) node #PHYSICAL "e_label" <<$archimate/physical-equipment>> as e_alias
@@ -186,6 +253,20 @@ skinparam usecase {
 !define Junction_And(e_alias, e_label) circle #black "e_label" as e_alias
 !define Grouping(e_alias, e_label) Folder "e_label" <<grouping>> as e_alias
 !define Group(e_alias, e_label) Folder "e_label" <<group>> as e_alias
+
+' Custom (Derived) Relationships
+' Dervived Relationships will have a lighter line and text colour [#eee]
+!define Rel_Composition_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, <color:#bbb>e_label, "*-[#bbb]-")
+!define Rel_Aggregation_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, <color:#bbb>e_label, "o-[#bbb]-")
+!define Rel_Assignment_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, <color:#bbb>e_label, "@-[#bbb]->>")
+!define Rel_Specialization_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, <color:#bbb>e_label, "-[#bbb]-|>")
+!define Rel_Serving_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, <color:#bbb>e_label, "-[#bbb]->")
+!define Rel_Association_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, <color:#bbb>e_label, "=[#bbb]=")
+!define Rel_Flow_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, <color:#bbb>e_label, ".[#bbb].>>")
+!define Rel_Realization_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, <color:#bbb>e_label, "~[#bbb]~|>")
+!define Rel_Triggering_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, <color:#bbb>e_label, "-[#bbb]->>")
+!define Rel_Access_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, <color:#bbb>e_label, "~[#bbb]~")
+!define Rel_Influence_Derived(e_From, e_To, e_label="") Rel_(e_From, e_To, <color:#bbb>e_label, ".[#bbb].>")
 
 
 ' Relationships
